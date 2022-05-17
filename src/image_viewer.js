@@ -1,6 +1,18 @@
-import '../styles/image_viewer.css'
+import small from '../assets/small.jpg';
+import big from '../assets/big.jpg';
 
-const image = document.createElement('img');
-image.src = "https://picsum.photos/400";
+import '../styles/image_viewer_3.css'
+import '../styles/image_viewer_2.css'
 
-document.body.appendChild(image);
+
+export default () => {
+    const image = document.createElement('img');
+    image.src = small;
+    // image.src = "./../assets/image-400x400.jpg";
+    document.body.appendChild(image);
+    
+    const span = document.createElement('span');
+    span.innerHTML = "I'm a span 😀🤣";
+    document.body.appendChild(span);
+}
+

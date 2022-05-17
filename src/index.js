@@ -1,5 +1,11 @@
-import sum from './sum.js';
-import './image_viewer.js';
+const button = document.createElement('button');
+button.innerText = 'Click me';
+button.onclick = () => {
+    console.log('Clicked');
+    System.import('./image_viewer').then(module => {
+        console.log('module', module);
+        module.default();
+    });
+}
 
-const temporal = sum(1, 2);
-console.log('the result is: ', 'as');
+document.body.appendChild(button);
